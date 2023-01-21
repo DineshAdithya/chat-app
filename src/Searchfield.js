@@ -8,7 +8,7 @@ export default function BasicTextFields() {
     <>
       <TextField
         size="small"
-        sx={{ margin: "8px" }}
+        sx={{ margin: "4.2px" }}
         id="outlined-basic"
         label="search"
         variant="outlined"

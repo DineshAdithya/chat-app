@@ -3,15 +3,18 @@ import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import Avatar from "@mui/material/Avatar";
 import { red } from "@mui/material/colors";
-import IconButton from "@mui/material/IconButton";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { Badge } from "@mui/material";
 
 export default function Persons(props) {
   return (
     <>
-      <div className="person">
-        <Card sx={{ width: "100%" }}>
+      <div
+        className={`person ${
+          props.selectedIndex === props.index && "person-selected"
+        }`}
+        onClick={props.onSelect}
+      >
+        <Card sx={{ width: "99%" }}>
           <CardHeader
             className="card-head"
             avatar={
@@ -25,17 +28,13 @@ export default function Persons(props) {
               <Badge
                 color="secondary"
                 badgeContent={99}
-                sx={{ margin: "0px" }}
+                sx={{ margin: "8px" }}
               />
             }
             title={props.name}
             subheader={props.message}
           />
         </Card>
-
-        {/* <img src={props.image}></img>
-        <h3>{props.name}</h3>
-        <p>{props.message}</p> */}
       </div>
     </>
   );
