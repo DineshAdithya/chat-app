@@ -1,3 +1,3 @@
 # chat-app
 
-A chat application
+A chat application used for chatting.
