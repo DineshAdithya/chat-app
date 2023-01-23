@@ -1,12 +1,21 @@
-import React, { useState } from "react";
-import { ReactDOM } from "react";
+import React, { useContext, useState } from "react";
 import Person from "./Persons";
 import Searchfield from "./Searchfield";
 import ToggleButton from "./ToggleButton";
-import { data } from "./data.js";
+// import { data } from "./data.js";
+import { DataContext } from "./Context/DataProvider";
 
 export default function Leftpart() {
   const [selectedIndex, setSelectedIndex] = useState(-1);
+  // const [message, setMessage] = useState(null);
+
+  const { data, showMessages } = useContext(DataContext);
+  // selectedData;
+  const onClickPerson = (id) => {
+    // console.log(key);
+    showMessages(data[id]);
+    // initialData.selectedData();
+  };
 
   return (
     <>
@@ -21,6 +30,8 @@ export default function Leftpart() {
             index={index}
             selectedIndex={selectedIndex}
             onSelect={() => setSelectedIndex(index)}
+            onClickPerson={onClickPerson}
+            id={item.id}
           />
         ))}
       </div>

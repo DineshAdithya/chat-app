@@ -6,7 +6,6 @@ import React, {
   useRef,
   useState,
 } from "react";
-import ReactDOM from "react-dom";
 import axios from "axios";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";

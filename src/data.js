@@ -1,5 +1,6 @@
 export const data = [
   {
+    id: "1",
     name: "kunji",
     message: "Mamae durrr",
     image:
@@ -7,6 +8,7 @@ export const data = [
   },
 
   {
+    id: "2",
     name: "Trisha",
     message: "i miss you babyy",
     image:
@@ -14,6 +16,7 @@ export const data = [
   },
 
   {
+    id: "3",
     name: "Sneha",
     message: "Dont talk to trisha",
     image:
