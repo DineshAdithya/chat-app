@@ -1,10 +1,20 @@
-import React from "react";
-import { ReactDOM } from "react";
+import React, { useContext } from "react";
+import Card from "@mui/material/Card";
+import { DataContext } from "./Context/DataProvider";
 
 export default function Main() {
+  const { selectedData } = useContext(DataContext);
+
+  // const useStyles = makeStyles({
+  //   leftText: {
+  //     textAlign: "left",
+  //   },
+  // });
+  // const classes = useStyles();
+
   return (
     <div className="main">
-      <img src=""></img>
+      <Card>{selectedData.message}</Card>
     </div>
   );
 }

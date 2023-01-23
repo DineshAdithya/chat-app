@@ -38,10 +38,9 @@
   background-color: rgb(178, 192, 207);
   flex: 4%;
   display: flex;
-  justify-content: right;
+  justify-content: left;
   align-items: center;
   gap: 20px;
-
 }
 
 .main {

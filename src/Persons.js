@@ -6,13 +6,17 @@ import { red } from "@mui/material/colors";
 import { Badge } from "@mui/material";
 
 export default function Persons(props) {
+  // const onClickPerson = () => {};
   return (
     <>
       <div
         className={`person ${
           props.selectedIndex === props.index && "person-selected"
         }`}
-        onClick={props.onSelect}
+        onClick={() => {
+          props.onClickPerson(props.index);
+          props.onSelect();
+        }}
       >
         <Card sx={{ width: "99%" }}>
           <CardHeader
